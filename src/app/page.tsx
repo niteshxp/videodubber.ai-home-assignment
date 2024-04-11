@@ -1,4 +1,5 @@
 "use client";
+
 import "@mantine/core/styles.css";
 import cx from "clsx";
 import { useState } from "react";
