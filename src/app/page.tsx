@@ -98,26 +98,28 @@ export default function Home() {
   });
 
   return (
-    <ScrollArea>
-      <Table miw={800} verticalSpacing="sm">
-        <Table.Thead>
-          <Table.Tr>
-            <Table.Th style={{ width: rem(40) }}>
-              <Checkbox
-                onChange={toggleAll}
-                checked={selection.length === data.length}
-                indeterminate={
-                  selection.length > 0 && selection.length !== data.length
-                }
-              />
-            </Table.Th>
-            <Table.Th>User</Table.Th>
-            <Table.Th>Email</Table.Th>
-            <Table.Th>Job</Table.Th>
-          </Table.Tr>
-        </Table.Thead>
-        <Table.Tbody>{rows}</Table.Tbody>
-      </Table>
-    </ScrollArea>
+    <div className="container">
+      <ScrollArea>
+        <Table miw={800} verticalSpacing="sm">
+          <Table.Thead>
+            <Table.Tr>
+              <Table.Th style={{ width: rem(40) }}>
+                <Checkbox
+                  onChange={toggleAll}
+                  checked={selection.length === data.length}
+                  indeterminate={
+                    selection.length > 0 && selection.length !== data.length
+                  }
+                />
+              </Table.Th>
+              <Table.Th>User</Table.Th>
+              <Table.Th>Email</Table.Th>
+              <Table.Th>Job</Table.Th>
+            </Table.Tr>
+          </Table.Thead>
+          <Table.Tbody>{rows}</Table.Tbody>
+        </Table>
+      </ScrollArea>
+    </div>
   );
 }
